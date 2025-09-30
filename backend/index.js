@@ -18,7 +18,7 @@ connectDB();
 connectCloudinary();
 
 const PORT = process.env.PORT || 5000;
-const allowedOrigins =["http://localhost:5173", "http://localhost:3000"]
+const allowedOrigins =["http://localhost:5173", "http://localhost:3000", "https://farm2home-frontend.onrender.com"]
 
 //middleware
 app.use(express.json());
