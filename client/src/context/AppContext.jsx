@@ -219,10 +219,8 @@ const AppContextProvider = ({children}) => {
         } else {
             setIsSeller(false);
         }
-        // Clear any existing user session and start fresh
-        setUser(null);
-        setCartItems({});
-        setAuthChecked(true);
+        // Check user authentication properly
+        fetchUser();
     }, []);
 
     const value={

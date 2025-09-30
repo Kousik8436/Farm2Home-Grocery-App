@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post("/cod", authUser, placeOrderCOD);
 router.post("/stripe", authUser, placeOrderStripe);
-router.post("/complete-payment", completePayment);
+router.post("/complete-payment", authUser, completePayment);
 router.get("/user", authUser, getUserOrders);
 router.get("/seller", authSeller, getAllOrders);
 

@@ -17,6 +17,7 @@ const app = express();
 connectDB();
 connectCloudinary();
 
+const PORT = process.env.PORT || 5000;
 const allowedOrigins =["http://localhost:5173", "http://localhost:3000"]
 
 //middleware
@@ -62,7 +63,7 @@ app.use("/api/order", OrderRoutes);
 app.use("/api/address", addressRoutes);
 
 
-const PORT=process.env.PORT || 5000;
+
 
 // Global error handler
 app.use((err, req, res, next) => {
